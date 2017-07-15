@@ -1,4 +1,4 @@
-# Metrojobb email hash decoder
+# Metrojobb Email Hash Decoder
 Python-converted reverse-engineering on the emails protection function of Metrojobb website.
 The service is concealing company email address using JavaScript, was forced to convert it to Python for an asyncronous scraper.
 
