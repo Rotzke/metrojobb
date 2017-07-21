@@ -5,21 +5,24 @@ from html.parser import HTMLParser
 
 def decode_hash(hash):
     """Use this function, Luke."""
-    a = hash
-    e = ''
-    r = '0x' + a[0:2]
-    n = 2
+    email = hash
+    result = ''
+    prefix = '0x' + email[0:2]
+    slicer = 2
     while True:
         try:
-            e += '&#' + \
+            result += '&#' + \
                 ('0' +
-                 hex(int('0x' + str(int(a[n:n + 2], 16) ^ int(r, 16)), 16))
+                 hex(int(
+                     '0x' + str(
+                         int(email[slicer:slicer + 2], 16) ^ int(prefix, 16)),
+                     16))
                  )[3:]
-            n += 2
+            slicer += 2
         except ValueError:
-            h = HTMLParser()
-            return(h.unescape(e))
-            
-            
+            parser = HTMLParser()
+            return parser.unescape(result)
+
+
 if __name__ == '__main__':
     print(decode_hash(input('Enter the hashed email: ')))
