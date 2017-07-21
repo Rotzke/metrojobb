@@ -3,19 +3,18 @@
 from html.parser import HTMLParser
 
 
-def decode_hash(hash):
+def decode_hash(hashed):
     """Use this function, Luke."""
-    email = hash
-    result = ''
-    prefix = '0x' + email[0:2]
+    email = ''
+    prefix = '0x' + hashed[0:2]
     slicer = 2
     while True:
         try:
-            result += '&#' + \
+            email += '&#' + \
                 ('0' +
                  hex(int(
                      '0x' + str(
-                         int(email[slicer:slicer + 2], 16) ^ int(prefix, 16)),
+                         int(hashed[slicer:slicer + 2], 16) ^ int(prefix, 16)),
                      16))
                  )[3:]
             slicer += 2
