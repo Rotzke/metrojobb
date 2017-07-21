@@ -1,4 +1,7 @@
 # Metrojobb Email Hash Decoder
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ad48ccb294574ec6b6c06a8ea5a9a9dc)](https://www.codacy.com/app/Rotzke/metrojobb?utm_source=github.com&utm_medium=referral&utm_content=Rotzke/metrojobb&utm_campaign=badger)
+
 Python-converted reverse-engineering on the emails protection function of Metrojobb website.
 The service is concealing company email address using JavaScript, was forced to convert it to Python for an asyncronous scraper.
 
