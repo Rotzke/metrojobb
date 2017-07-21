@@ -22,4 +22,4 @@ def decode_hash(hash):
             
             
 if __name__ == '__main__':
-    print(decode_hash(input('Enter the hashed email: )))
+    print(decode_hash(input('Enter the hashed email: ')))
